@@ -1,0 +1,18 @@
+import datetime
+
+# تاريخ بداية عيد الأضحى 2024
+start_date = datetime.datetime(2024, 6, 16)
+
+# تاريخ اليوم الحالي
+current_date = datetime.datetime.now()
+
+# حساب الفارق بين التواريخ
+time_remaining = start_date - current_date
+
+# استخراج الأيام والساعات والدقائق والثواني
+days = time_remaining.days
+hours, remainder = divmod(time_remaining.seconds, 3600)
+minutes, seconds = divmod(remainder, 60)
+
+# عرض العد التنازلي
+print(f"المتبقي: {days} أيام، {hours} ساعة، {minutes} دقيقة، {seconds} ثانية")
